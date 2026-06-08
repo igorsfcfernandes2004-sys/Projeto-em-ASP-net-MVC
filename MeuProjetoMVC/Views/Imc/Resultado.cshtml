@@ -1,0 +1,25 @@
+@model MeuProjetoMVC.Models.Imc
+
+<h1 style="color:green">
+    Resultado do IMC
+</h1>
+
+<p>
+    <strong>Peso:</strong>
+    @Model.Peso
+</p>
+
+<p>
+    <strong>Altura:</strong>
+    @Model.Altura
+</p>
+
+<p>
+    <strong>IMC:</strong>
+    @Model.Resultado.ToString("F2")
+</p>
+
+<a asp-controller="Imc"
+   asp-action="Calcular">
+    Novo cálculo
+</a>
