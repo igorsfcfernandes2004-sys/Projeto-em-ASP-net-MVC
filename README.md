@@ -6,13 +6,29 @@ RA: 926103610
 
 
 
-Esta aplicação foi desenvolvida utilizando ASP.NET MVC.
+# Consulta CEP ASP.NET MVC
 
-O sistema recebe o peso e a altura do usuário através de um formulário. Os dados são enviados para o Controller, onde o cálculo do IMC é realizado no lado do servidor (Server Side).
+Aplicação desenvolvida em ASP.NET MVC utilizando integração com a API ViaCEP.
 
-Após o cálculo, o resultado é exibido em uma página de confirmação mostrando o IMC calculado.
+O usuário informa seu nome, CEP e número da residência. Ao sair do campo CEP, uma requisição AJAX utilizando jQuery consulta a API ViaCEP e preenche automaticamente os campos de endereço (logradouro, bairro, cidade e UF).
 
-Fórmula utilizada:
+Os dados são enviados para o Controller através de Model Binding e exibidos em uma página de confirmação somente leitura.
 
-IMC = Peso / (Altura × Altura)
-![alt text](image.png)
+## Tecnologias utilizadas
+
+- ASP.NET MVC
+- C#
+- jQuery
+- AJAX
+- ViaCEP API
+
+## Funcionalidades
+
+- Consulta automática de CEP
+- Preenchimento automático do endereço
+- Model Binding
+- Página de confirmação
+
+## Print da aplicação
+
+![alt text](image-1.png)
