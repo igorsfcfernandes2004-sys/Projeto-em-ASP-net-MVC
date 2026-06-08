@@ -12,12 +12,10 @@ namespace MeuProjetoMVC.Controllers
 
             return View();
         }
-    }
-}
+
         public IActionResult Detalhes(int id)
         {
             return Content($"ID do aluno recebido: {id}");
         }
     }
 }
-

@@ -25,4 +25,29 @@ public class HomeController : Controller
     {
     return View();
     }
+    public IActionResult Boletim()
+{
+    List<string> disciplinas = new List<string>()
+    {
+        "Matemática",
+        "Português",
+        "História",
+        "Geografia",
+        "Programação"
+    };
+
+    List<double> notas = new List<double>()
+    {
+        9.5,
+        8.0,
+        6.5,
+        4.0,
+        10.0
+    };
+
+    ViewBag.Disciplinas = disciplinas;
+    ViewBag.Notas = notas;
+
+    return View();
+}
 }
