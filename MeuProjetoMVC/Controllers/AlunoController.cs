@@ -4,7 +4,7 @@ namespace MeuProjetoMVC.Controllers
 {
     public class AlunoController : Controller
     {
-    public IActionResult Index()
+        public IActionResult Index()
         {
             ViewBag.Nome = "Igor";
             ViewBag.Curso = "Análise e Desenvolvimento de Sistemas";
