@@ -1,0 +1,19 @@
+@model MeuProjetoMVC.Models.Aluno
+
+<h1 style="color:green">
+    Cadastro realizado com sucesso!
+</h1>
+
+<p><strong>Nome:</strong> @Model.Nome</p>
+<p><strong>Email:</strong> @Model.Email</p>
+<p><strong>RA:</strong> @Model.RA</p>
+<p><strong>Curso:</strong> @Model.Curso</p>
+<p><strong>Data de Nascimento:</strong> @Model.DataNascimento.ToShortDateString()</p>
+
+<br />
+
+<a asp-controller="Aluno"
+   asp-action="Cadastrar"
+   class="btn btn-primary">
+    Cadastrar outro
+</a>

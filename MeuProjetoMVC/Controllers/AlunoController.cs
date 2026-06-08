@@ -1,21 +1,25 @@
 using Microsoft.AspNetCore.Mvc;
+using MeuProjetoMVC.Models;
 
 namespace MeuProjetoMVC.Controllers
 {
     public class AlunoController : Controller
     {
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Cadastrar()
         {
-            ViewBag.Nome = "Igor";
-            ViewBag.Curso = "Análise e Desenvolvimento de Sistemas";
-            ViewBag.Semestre = "1º Semestre";
-
             return View();
         }
 
-        public IActionResult Detalhes(int id)
+        [HttpPost]
+        public IActionResult Cadastrar(Aluno aluno)
         {
-            return Content($"ID do aluno recebido: {id}");
+            if (!ModelState.IsValid)
+            {
+                return View(aluno);
+            }
+
+            return View("Confirmacao", aluno);
         }
     }
 }
