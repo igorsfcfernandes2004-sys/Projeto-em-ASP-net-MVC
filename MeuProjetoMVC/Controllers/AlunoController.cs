@@ -12,5 +12,15 @@ namespace MeuProjetoMVC.Controllers
 
             return View();
         }
+<<<<<<< HEAD
     }
 }
+=======
+
+        public IActionResult Detalhes(int id)
+        {
+            return Content($"ID do aluno recebido: {id}");
+        }
+    }
+}
+>>>>>>> 664c88e (Atividade MVC concluída)
